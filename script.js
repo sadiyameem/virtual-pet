@@ -35,7 +35,7 @@ function updateBar() {
 }
 
 function feedPet() {
-    var sound= document.getElementById('eatSound');
+    var sound = document.getElementById('eatSound');
     sound.currentTime = 0;
     sound.play();
     hungry = Math.max(0, hungry - 3);
@@ -44,7 +44,7 @@ function feedPet() {
 }
 
 function playPet() {
-    var sound= document.getElementById('playSound');
+    var sound = document.getElementById('playSound');
     sound.currentTime = 0;
     sound.play();
     if (energy >= 2) {
@@ -58,7 +58,7 @@ function playPet() {
 }
 
 function sleepPet() {
-    var sound= document.getElementById('sleepSound');
+    var sound = document.getElementById('sleepSound');
     sound.currentTime = 0;
     sound.play();
     energy = Math.min(10, energy + 4);
@@ -72,6 +72,29 @@ function autoDecay() {
     energy = Math.max(0, energy - 0.1);
     updateBar();
 }
+
+var factPlaceholder = document.getElementById("cat-fact");
+var showFact = document.getElementById("show-fact");
+
+var CatFacts = [
+    "Milk Is Not Good For Cats! Most Cats Are Lactose Intolerant.",
+    "There is a Cat Mayor: Stubbs the Cat has been the honorary mayor of Talkeetna in Alaska since July 1997.",
+    "Some cats have extra toes.",
+    "Cats have more bones than humans: A cat’s body contains about 230 bones, compared to 206 in the human body.",
+    "Cats have a third eyelid.",
+    "Every cat has a unique nose print."
+]
+
+var factNumber;
+
+function randomFacts() {
+    return CatFacts[factNumber];
+}
+
+showFact.addEventListener('click', function() {
+    factNumber = Math.floor(Math.random() * 5);
+    factPlaceholder.textContent = randomFacts();
+})
 
 // game loop
 setInterval(autoDecay, 3000);
