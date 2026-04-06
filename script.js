@@ -35,12 +35,18 @@ function updateBar() {
 }
 
 function feedPet() {
+    var sound= document.getElementById('eatSound');
+    sound.currentTime = 0;
+    sound.play();
     hungry = Math.max(0, hungry - 3);
     happy = Math.min(10, happy + 1);
     updateBar();
 }
 
 function playPet() {
+    var sound= document.getElementById('playSound');
+    sound.currentTime = 0;
+    sound.play();
     if (energy >= 2) {
         happy = Math.min(10, happy + 2);
         hungry = Math.min(10, hungry + 1);
@@ -52,6 +58,9 @@ function playPet() {
 }
 
 function sleepPet() {
+    var sound= document.getElementById('sleepSound');
+    sound.currentTime = 0;
+    sound.play();
     energy = Math.min(10, energy + 4);
     hungry = Math.min(10, hungry + 1);
     updateBar();
