@@ -23,7 +23,7 @@ function updateBar() {
         document.body.style.background = 'linear-gradient(to bottom, #a9f527)';
         messageEl.innerHTML = "I'm super happy! ";
     } else if (hungry >= 8) {
-        document.body.style.background = 'linear-gradient(to bottom, #f52727)';
+        document.body.style.background = 'linear-gradient(to bottom, #f527f5)';
         messageEl.innerHTML = "I'm starving! ";
     } else if (energy <= 2) {
         document.body.style.background = 'linear-gradient(to bottom, #2746f5)';
@@ -33,3 +33,38 @@ function updateBar() {
         messageEl.innerHTML = "I'm happy! ";
     }
 }
+
+function feedPet() {
+    hungry = Math.max(0, hungry - 3);
+    happy = Math.min(10, happy + 1);
+    updateBar();
+}
+
+function playPet() {
+    if (energy >= 2) {
+        happy = Math.min(10, happy + 2);
+        hungry = Math.min(10, hungry + 1);
+        energy = Math.max(0, energy - 2);
+        updateBar();
+    } else {
+        messageEl.innerHTML = "i'm too tired to play!";
+    }
+}
+
+function sleepPet() {
+    energy = Math.min(10, energy + 4);
+    hungry = Math.min(10, hungry + 1);
+    updateBar();
+}
+
+function autoDecay() {
+    hungry = Math.min(10, hungry + 0.2);
+    happy = Math.max(0, happy - 0.15);
+    energy = Math.max(0, energy - 0.1);
+    updateBar();
+}
+
+// game loop
+setInterval(autoDecay, 3000);
+
+updateBar();

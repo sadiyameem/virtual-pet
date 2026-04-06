@@ -12,10 +12,10 @@ h1 {
 }
 
 .pet {
-    width: 200px;
-    height: 200px;
+    width: 340px;
+    height: 340px;
     margin: 10px auto;
-    background: url('tree-cat.jpg');
+    background: url('sitting-cat.jpg');
 }
 
 .stats {
