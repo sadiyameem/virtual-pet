@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Virtual Pet</title>
+    </head>
+    <body>
+        <div class="pet" id="petImage"></div>
+
+        <div class="stats">
+            <div>Hungry:</div>
+            <div class="bar-container">
+                <div class="bar hungry" id="hungryBar"></div>
+            </div>
+
+            <div>Happy:</div>
+            <div class="bar-container">
+                <div class="bar happy" id="happyBar"></div>
+            </div>
+
+            <div>Energy:</div>
+            <div class="bar-container">
+                <div class="bar energy" id="energyBar"></div>
+            </div>
+        </div>
+
+        <div class="message" id="message">I am happy</div>
+
+        <button onclick="feedPet()">🐟 Feed</button>
+        <button onclick="playPet()">🧶 Play</button>
+        <button onclick="sleepPet()">💭 Sleep</button>
+    </body>
+</html>
