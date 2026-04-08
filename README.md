@@ -9,6 +9,7 @@
 - Feed, play and sleep buttons
 - Sound effects
 - Random cat facts
+- Based on how the pet is feeling the background changes colors accordingly
   
 # Tools
 - HTML
