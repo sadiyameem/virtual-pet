@@ -1,7 +1,8 @@
 # Virtual Pet
 
 # Description
-- Th is a interactive virtual pet game where you can feed, play with, and let your pet sleep. As you click on the buttons there is a sound for each button and fun facts you can read as you take care of your pet.
+- This a interactive virtual pet game where you can feed, play with, and let your pet sleep.
+- As you click on the buttons there is a sound for each button and fun facts you can read as you take care of your pet.
 
 # Features
 - Track hunger, happiness and energy
